@@ -20,12 +20,27 @@
                 <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
                     <ul class="navbar-nav flex-grow-1">
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
+                            <a class="nav-link text-dark" asp-controller="Home" asp-action="Privacy"><i class="badge-info bi-film"></i>Button2</a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <i class="badge-info bi-gear"></i> Management 
+                        </a>
+
+                            <div class="dropdown-menu" aria-labeledby="navbarDropdown">
+                                <a class="dropdown-item" asp-controller="Home" asp-action="Privacy"> <i class="bi bi-camera-reels"></i> Option1</a>
+                                <a class="dropdown-item" asp-controller="Home" asp-action="Privacy"> <i class="bi bi-camera-reels"></i> Option2</a>
+                                <a class="dropdown-item" asp-controller="Home" asp-action="Privacy"> <i class="bi bi-camera-reels"></i> Option3</a>
+                            </div>
+
                         </li>
                     </ul>
+
+                    <form class="form-inline my-2 my-lg-0" asp-controller="Home" asp-action="Privacy" style="padding-right: 25px; display:flex">
+                        <input name="searchString" type="text" class="form-control" placeholder="Search for a movie...">
+                        <button class="btn btn-outline-success my-2 my-sm-0" type="submit"><i class="bi bi-search"></i>Search</button>
+                    </form>
                 </div>
             </div>
         </nav>
@@ -38,7 +53,7 @@
 
     <footer class="border-top footer text-muted">
         <div class="container">
-            &copy; 2022 - MovieLover - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+            &copy; 2022 - MovieLover 
         </div>
     </footer>
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
