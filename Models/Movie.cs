@@ -1,4 +1,4 @@
-﻿using MovieLover.Data;
+﻿using MovieLover.Data.Enums;
 using System.ComponentModel.DataAnnotations;
 
 namespace MovieLover.Models

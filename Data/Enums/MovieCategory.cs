@@ -1,16 +1,16 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace MovieLover.Data
+namespace MovieLover.Data.Enums
 {
     public enum MovieCategory
     {
-        Action =1,
+        Action = 1,
         Adventure,
         Comedy,
         Drama,
         Horror,
         Romance,
-        [Display(Name ="Science Fiction")]
+        [Display(Name = "Science Fiction")]
         Sciencefiction,
         Fantasy,
         Historical,
