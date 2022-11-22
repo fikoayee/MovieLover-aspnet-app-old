@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using MovieLover.Models;
 
 namespace MovieLover.Controllers
 {
@@ -12,5 +13,18 @@ namespace MovieLover.Controllers
         {
             return View();
         }
+
+        [HttpPost]
+        public IActionResult Register(Register user)
+        {
+            using (var db = new AppDbContext())
+            {
+                db.Add(user);
+                db.SaveChanges();
+            }
+            
+            return View();
+        }
+
     }
 }

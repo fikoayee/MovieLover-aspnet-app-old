@@ -8,6 +8,7 @@ using System.Reflection.Metadata;
 public class AppDbContext : DbContext
 {
     public DbSet<Movie> Movies { get; set; }
+    public DbSet<Register> Registers { get; set; }
 
     public string DbPath { get; }
 
